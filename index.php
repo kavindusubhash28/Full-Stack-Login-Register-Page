@@ -10,7 +10,7 @@
 <!-- Register Form -->
     <div class="container">
         <div class="form-box active" id="login-form">
-            <form action="">
+            <form action="Login Page.php" method="post">
                <h2>Login</h2>
                <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
@@ -22,7 +22,7 @@
 <!-- Register Form -->
     <div class="container">
         <div class="form-box" id="register-form">
-            <form action="">
+            <form action="Login Page.php" method="post">
                <h2>Register</h2>
                <input type="text" name="name" placeholder="Name" required>
                <input type="email" name="email" placeholder="Email" required>
