@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
         $_SESSION['register_error'] = "Email is already registered!";
         $_SESSION['active_form'] = 'register';
     } else {
-        $conn=>query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')");
+        $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password', '$role')");
     }
 
     header("Location: index.php");

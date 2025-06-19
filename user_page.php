@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['email']) {
+if (!isset($_SESSION['email'])) {
     header("Location: index.php");
     exit();
 }
@@ -18,7 +18,7 @@ if (!isset($_SESSION['email']) {
 </head>
 <body style="background-color: #fff;">
     <div class="box">
-        <h1>Welcome, <span><?$_SESSION['name']; ?></span></h1>
+        <h1>Welcome, <span><?= $_SESSION['name']; ?></span></h1>
         <p>This is an <span>user</span> page</p>
         <button onclick="window.location.href='logout.php'">Logout</button>
     </div>

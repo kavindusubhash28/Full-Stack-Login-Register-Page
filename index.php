@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 session_start();
 
@@ -31,8 +34,8 @@ function isActive($formName, $activeForm) {
 <body>
 <!-- Register Form -->
     <div class="container">
-        <div class="form-box <?=isActiveForm('login', $activeForm); ?>" id="login-form">
-            <form action="Login Page.php" method="post">
+        <div class="form-box <?=isActive('login', $activeForm); ?>" id="login-form">
+            <form action="Loginn Page.php" method="post">
                <h2>Login</h2>
                <?= showError($errors['login']); ?>
                <input type="email" name="email" placeholder="Email" required>
@@ -44,8 +47,8 @@ function isActive($formName, $activeForm) {
     </div>
 <!-- Register Form -->
     <div class="container">
-        <div class="form-box <?=isActiveForm('register', $activeForm); ?>" id="register-form">
-            <form action="Login Page.php" method="post">
+        <div class="form-box <?=isActive('register', $activeForm); ?>" id="register-form">
+            <form action="Loginn Page.php" method="post">
                <h2>Register</h2>
                <?= showError($errors['register']); ?>
                <input type="text" name="name" placeholder="Name" required>
